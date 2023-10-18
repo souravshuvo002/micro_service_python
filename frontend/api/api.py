@@ -9,6 +9,7 @@ import os
 
 model = models.load_model('handwriting.keras')
 
+#instance variable of FastAPI - to have all the routes
 app = FastAPI()
 
 
