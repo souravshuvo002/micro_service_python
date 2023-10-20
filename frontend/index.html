@@ -106,7 +106,7 @@
                 }
                 alert(xhr.status+': '+xhr.responseText)
             }
-            xhr.open('POST','http://localhost:8082/text-to-speech')
+            xhr.open('POST','http://0.0.0.0:8081/text-to-speech')
             console.log(localStorage.getItem('predict-data'))
             xhr.send(localStorage.getItem('predict-data'))
         }
@@ -118,7 +118,7 @@
     
         playButton.addEventListener('click', () => {
         // Replace 'your_api_endpoint_here' with the actual API endpoint
-        fetch('http://localhost:8082/text-to-speech', {
+        fetch('http://0.0.0.0:8081/text-to-speech', {
             method: 'POST',
             headers: {
                 'Content-Type': 'audio/mpeg',

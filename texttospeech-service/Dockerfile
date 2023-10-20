@@ -6,5 +6,6 @@ COPY api.py .
 
 RUN pip install boto3 fastapi "uvicorn[standard]" Pillow
 
-EXPOSE 8080
+EXPOSE 8081
+
 CMD [ "python3","api.py"]

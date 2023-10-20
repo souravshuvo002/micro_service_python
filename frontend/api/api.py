@@ -15,7 +15,7 @@ app = FastAPI()
 
 @app.get('/')
 async def getHome():
-    return FileResponse('../index.html')
+    return FileResponse('./index.html')
 
 def convertImage(dst):
     pic = numpy.asarray(Image.open(dst).convert('L').resize((28, 28)), float)
@@ -47,4 +47,4 @@ async def readImage(req: Request):
     return str(label)
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port=8080)
+    uvicorn.run(app, host='0.0.0.0', port=8085)

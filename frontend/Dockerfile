@@ -8,5 +8,5 @@ COPY index.html .
 
 RUN pip install tensorflow numpy mnist keras fastapi "uvicorn[standard]" Pillow
 
-EXPOSE 8081
+EXPOSE 8085
 CMD [ "python3","api.py"]

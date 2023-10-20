@@ -5,6 +5,7 @@ import boto3
 import random
 from fastapi.middleware.cors import CORSMiddleware
 
+#instance variable of FastAPI - to have all the routes
 app = FastAPI()
 
 origins = ["*"]
@@ -63,4 +64,4 @@ async def textToSpeech(req: Request):
    
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port=8082)
+    uvicorn.run(app, host='0.0.0.0', port=8081)
