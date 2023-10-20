@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-texttoservice
+  name: myapp
 spec:
-  replicas: 1  # Number of desired replicas (pods)
   selector:
     matchLabels:
-      app: my-app
+      app: myapp
   template:
-    metadata: 
+    metadata:
       labels:
-        app: my-app
+        app: myapp
     spec:
       containers:
-      - name: texttoservice
-        image: digit-reader:latest  # Replace with your Docker image name and tag
+      - name: myapp-8085
+        image: myimage
+        imagePullPolicy: Never
         ports:
-        - containerPort: 8080
+        - containerPort: 8085
